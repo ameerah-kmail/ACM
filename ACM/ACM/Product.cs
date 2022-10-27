@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,18 @@ using System.Threading.Tasks;
 
 namespace ACM
 {
-    internal class Product
+    internal class Product:EntityBase,ILoggable
     {
         public int ProductId { get;private set; }
-        public string ProductName { get; set; }
+        private string _productName;
+        public string ProductName {
+            get {
+                //return StringHandler.InsertSpaces(_productName);
+                return _productName.InsertSpaces();//extension method for string
+            }
+
+            set { _productName = value; }
+        }
         public string Descrition { get; set; }
         public decimal? CurrentPrice { get; set; }
         public Product()
@@ -20,7 +29,7 @@ namespace ACM
         {
             ProductId = productId;
         }
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrWhiteSpace(ProductName))
@@ -30,7 +39,10 @@ namespace ACM
             return isValid;
 
         }
+        public override string ToString() => ProductName;
+        public string Log() =>
+        $"{ProductId}: {ProductName} Descrition: {Descrition} Status: {EntityState.ToString()}";
 
-      
+
     }
 }

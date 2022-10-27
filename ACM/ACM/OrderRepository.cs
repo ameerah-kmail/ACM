@@ -18,9 +18,25 @@ namespace ACM
             }
             return order;
         }
-        public bool save(Order Order)
+        public bool save(Order order)
         {
-            return true;
+            var success = true;
+            if (order.IsValid)
+            {
+                if (order.IsNew)
+                {
+                    //////////////////
+                }
+                else
+                {
+                    /////////////////////////
+                }
+            }
+            else
+            {
+                success = false;
+            }
+            return success;
         }
     }
 }

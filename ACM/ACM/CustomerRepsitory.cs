@@ -28,7 +28,23 @@ namespace ACM
         }
         public bool save(Customer customer)
         {
-            return true;
+            var success = true;
+            if (customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+                    //////////////////
+                }
+                else
+                {
+                    /////////////////////////
+                }
+            }
+            else
+            {
+                success = false;
+            }
+            return success;
         }
 
     }

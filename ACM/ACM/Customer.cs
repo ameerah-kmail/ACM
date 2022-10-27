@@ -1,6 +1,8 @@
-﻿namespace ACM 
+﻿using Acme;
+
+namespace ACM 
 {
-    public class Customer
+    public class Customer: EntityBase,ILoggable
     {
         public List<Address> AddressList { get; set; }
         public Address WorkAddress { get; set; }
@@ -14,7 +16,7 @@
             get { return _lastName; }   
             set { _lastName = value; }
         }
-        public string FullNmae {
+        public string FullName {
             get
             {
                 if(string.IsNullOrWhiteSpace(LastName) )
@@ -36,7 +38,7 @@
             CustomerId = customerId;
         }
 
-        public bool Validate()
+        public  override bool Validate()
         {
             var isValid = true;
             if(string.IsNullOrWhiteSpace(LastName)) 
@@ -46,6 +48,9 @@
             return isValid;
 
         }
+        public override string ToString() => base.ToString();
+        public string Log() =>
+        $"{CustomerId}: {FullName} Email: {Email} Status: { EntityState.ToString()}";
 
-    }
+    }//end of Customer
 }  

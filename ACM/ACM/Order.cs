@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ACM
 {
-    public class Order
+    public class Order: EntityBase,ILoggable
     {
         public int OrderId { get; private set; }
         //Customer _customer;
@@ -25,7 +26,7 @@ namespace ACM
             OrderId = orderId;
             OrderItems = new List<OrderItem>();
         }
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (OrderDate==null)
@@ -45,5 +46,12 @@ namespace ACM
         {
             return new List<Order>();
         }
+        public override string ToString()
+        {
+            return $"{OrderDate.Value.Date}({OrderId})";
+        }
+
+        public string Log() =>
+       $"{OrderId}: Date: {this.OrderDate.Value.Date} Status: {EntityState.ToString()}";
     }
 }
