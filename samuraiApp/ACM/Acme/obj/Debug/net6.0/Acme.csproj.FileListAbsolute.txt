@@ -1,0 +1,12 @@
+C:\Users\Logitude\source\repos\ACM\Acme\bin\Debug\net6.0\Acme.deps.json
+C:\Users\Logitude\source\repos\ACM\Acme\bin\Debug\net6.0\Acme.dll
+C:\Users\Logitude\source\repos\ACM\Acme\bin\Debug\net6.0\Acme.pdb
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.csproj.AssemblyReference.cache
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.AssemblyInfoInputs.cache
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.AssemblyInfo.cs
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.csproj.CoreCompileInputs.cache
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.dll
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\refint\Acme.dll
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\Acme.pdb
+C:\Users\Logitude\source\repos\ACM\Acme\obj\Debug\net6.0\ref\Acme.dll

@@ -1,0 +1,15 @@
+C:\Users\Logitude\source\repos\ACM\ACM\bin\Debug\net6.0\ACM.deps.json
+C:\Users\Logitude\source\repos\ACM\ACM\bin\Debug\net6.0\ACM.dll
+C:\Users\Logitude\source\repos\ACM\ACM\bin\Debug\net6.0\ACM.pdb
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.csproj.AssemblyReference.cache
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.AssemblyInfoInputs.cache
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.AssemblyInfo.cs
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.csproj.CoreCompileInputs.cache
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.dll
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\refint\ACM.dll
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.pdb
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ref\ACM.dll
+C:\Users\Logitude\source\repos\ACM\ACM\bin\Debug\net6.0\Acme.dll
+C:\Users\Logitude\source\repos\ACM\ACM\bin\Debug\net6.0\Acme.pdb
+C:\Users\Logitude\source\repos\ACM\ACM\obj\Debug\net6.0\ACM.csproj.CopyComplete

@@ -1,0 +1,17 @@
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Data.deps.json
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Data.runtimeconfig.json
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Data.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Data.pdb
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Domain.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\bin\Debug\net6.0\samuraiApp.Domain.pdb
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.csproj.AssemblyReference.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.AssemblyInfoInputs.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.AssemblyInfo.cs
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.csproj.CopyComplete
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\refint\samuraiApp.Data.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.pdb
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\samuraiApp.Data.genruntimeconfig.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Data\obj\Debug\net6.0\ref\samuraiApp.Data.dll

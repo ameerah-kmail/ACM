@@ -1,0 +1,14 @@
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\bin\Debug\net6.0\samuraiApp.Domain.deps.json
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\bin\Debug\net6.0\samuraiApp.Domain.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\bin\Debug\net6.0\samuraiApp.Domain.pdb
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.csproj.AssemblyReference.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.AssemblyInfo.cs
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\refint\samuraiApp.Domain.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.pdb
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\ref\samuraiApp.Domain.dll
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\bin\Debug\net6.0\samuraiApp.Domain.runtimeconfig.json
+C:\Users\Logitude\source\repos\samuraiApp\samuraiApp.Domain\obj\Debug\net6.0\samuraiApp.Domain.genruntimeconfig.cache
