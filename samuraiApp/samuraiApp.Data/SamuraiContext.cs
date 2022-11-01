@@ -1,21 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using samuraiApp.Domain;
 
 namespace samuraiApp.Data
 {
     public class SamuraiContext:DbContext
     {
+        public SamuraiContext(DbContextOptions<SamuraiContext> options)
+            : base(options)
+        {
+
+        }
         public DbSet<Samurai> Samurais { get; set; }
+        public DbSet<SamuraiBattleStat> SamuraiBattleStats { get; set; }
         public DbSet<Battle> Battles { get; set; }
         public DbSet<Quote> Quotes { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             /*optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SamuraiAppData"
                 ,options=> options.MaxBatchSize(100))
                 .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, 
                 LogLevel.Information)
-                .EnableSensitiveDataLogging();*/
+                .EnableSensitiveDataLogging();
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SamuraiAppData"
                 , options => options.MaxBatchSize(100))
                 .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name ,
@@ -23,7 +28,7 @@ namespace samuraiApp.Data
                 .EnableSensitiveDataLogging();
             //base.OnConfiguring(optionsBuilder);
 
-        }
+        }*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             
         {
@@ -36,7 +41,9 @@ namespace samuraiApp.Data
                    bs => bs.HasOne<Samurai>().WithMany())
                   .Property(bs => bs.DateJoined)
                   .HasDefaultValueSql("getdate()");
-           // modelBuilder.Entity<XYZBattleSamurai>().ToTable("BattleSamurai");
+            // modelBuilder.Entity<XYZBattleSamurai>().ToTable("BattleSamurai");
+            modelBuilder.Entity<Horse>().ToTable("Horses");
+            modelBuilder.Entity<SamuraiBattleStat>().HasNoKey().ToView("SamuraiBattleStats");
 
         }
 

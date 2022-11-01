@@ -15,8 +15,59 @@ namespace samuraiApp.UI
             // AddSamuraisByName("julie","sampson");
             // GetSamurais("after add:");
             // RetrieveAndDeleteSamurai();
-            FilterinWithRelatedDate();
-            Console.ReadKey();
+            //FilterinWithRelatedDate();
+            //Console.ReadKey();
+            //QuerySamuraiBattleStats();
+            //QuerySamuraiBattleFirstAndSampsonStat();
+            //QueryRelatedUsingRawSql();
+            //QueryUsingRawSqlWithInterpolation();
+            QueryUsingfromSqlIntStoredProc();
+        }
+        private static void QueryUsingRawSql()
+        {
+            var samurais = _context.Samurais.FromSqlRaw("select * from samurais").ToList();
+        }
+        private static void QueryRelatedUsingRawSql()
+        {//Left Join
+            var samurais = _context.Samurais.FromSqlRaw("select Id,Name from samurais")
+                .Include(s=>s.Quotes).ToList();
+        }
+        private static void QueryUsingRawSqlWithInterpolation()
+        {
+            string name = "Kiskuchyo";
+            var samurais = _context.Samurais
+                .FromSqlInterpolated($"select * from samurais where Name={name}").ToList();
+        }
+        private static void QueryUsingfromSqlRowStoredProc()
+        {
+            var word = "Happy";
+            var samurai=_context.Samurais.FromSqlRaw(
+                "EXEC dbo.SamuraisWhoSaidAWord{0}",word).ToList();
+        }
+        private static void QueryUsingfromSqlIntStoredProc()
+        {
+            var word = "Happy";
+            var samurai = _context.Samurais.FromSqlInterpolated(
+                $"EXEC dbo.SamuraisWhoSaidAWord{word}").ToList();
+        }
+        private static void ExecuteSomeRawSql()
+        {
+            var samuraiId = 2;
+            var affected = _context.Database.ExecuteSqlRaw
+                ("EXEC DeleteQuotesForSamurai {0}", samuraiId);
+        }
+        /// <summary>
+        /// ///////////
+        /// </summary>
+        private static void QuerySamuraiBattleStats()
+        {
+            var stats = _context.SamuraiBattleStats.ToList();
+        }
+        private static void QuerySamuraiBattleFirstAndSampsonStat()
+        {
+            var firstStat = _context.SamuraiBattleStats.FirstOrDefault();
+            var sampsonState = _context.SamuraiBattleStats
+                .FirstOrDefault(b => b.Name == "SampsonSan");
         }
         private static void AddSamuraisByName(params string[] names)
         {
@@ -297,5 +348,57 @@ namespace samuraiApp.UI
             }
 
         }
+        private static void AddNewSamuraiWithHorse()
+        {
+            var samurai = new Samurai { Name = "jine" };
+            samurai.Horse = new Horse { Name = "silver" };
+            _context.Samurais.Add(samurai);
+            _context.SaveChanges();
+        }
+        private static void AddNewHorseToSamuraiUsingId()
+        {
+            var horse = new Horse { Name = "scout",SamuraiId=2 };
+            _context.Add(horse);
+            _context.SaveChanges();
+        }
+        private static void AddNewHorseToSamuraiObject()
+        {
+            var samurai = _context.Samurais.Find(12);
+            samurai.Horse = new Horse { Name = "Black Beauty" };
+            _context.SaveChanges();
+        }
+        private static void AddNewHorseToDisconnectedSamuraiObject()
+        {
+            var samurai = _context.Samurais.AsNoTracking().FirstOrDefault(s=>s.Id==5);
+            samurai.Horse = new Horse { Name = "Mr.ed" };
+            var newContext = new SamuraiContext();
+            newContext.Samurais.Attach(samurai);
+            newContext.SaveChanges();
+        }
+        private static void ReplaceAHorse()
+        {
+            var samurai=_context.Samurais.Include(s=>s.Horse)
+                .FirstOrDefault(s=>s.Id==5);
+            samurai.Horse = new Horse { Name = "Trigger" };
+            _context.SaveChanges();
+        }
+        private static void ReplaceHorseOwner()
+        {
+            var horse = _context.Set<Horse>().FirstOrDefault(h => h.Name == "Mr.ed");
+            horse.SamuraiId=5;
+            _context.SaveChanges();
+        }
+        private static void GetSamuraiWithHorse()
+        {
+            var samurais = _context.Samurais.Include(s => s.Horse).ToList();
+        }
+        private static void GetHorseWithSamurai()
+        {
+            var horseOnly=_context.Set<Horse>().Find(3);
+
+            var horseWithSamurai=_context.Samurais.Include(s=>s.Horse)
+                .FirstOrDefault(s=>s.Horse.Id==3);
+        }
+
     }//end of Program
 }
