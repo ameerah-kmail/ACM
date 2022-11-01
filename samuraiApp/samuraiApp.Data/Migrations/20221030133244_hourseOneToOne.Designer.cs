@@ -11,7 +11,7 @@ using samuraiApp.Data;
 
 namespace samuraiApp.Data.Migrations
 {
-    [DbContext(typeof(SamuraiContext))]
+    [DbContext(typeof(SamuraiContextNoTracking))]
     [Migration("20221030133244_hourseOneToOne")]
     partial class hourseOneToOne
     {

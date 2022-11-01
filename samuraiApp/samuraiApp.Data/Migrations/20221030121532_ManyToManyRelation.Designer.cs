@@ -10,7 +10,7 @@ using samuraiApp.Data;
 
 namespace samuraiApp.Data.Migrations
 {
-    [DbContext(typeof(SamuraiContext))]
+    [DbContext(typeof(SamuraiContextNoTracking))]
     [Migration("20221030121532_ManyToManyRelation")]
     partial class ManyToManyRelation
     {

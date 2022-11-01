@@ -11,10 +11,15 @@ namespace samuraiApp.Data
         public DbSet<Quote> Quotes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SamuraiAppData"
+            /*optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SamuraiAppData"
                 ,options=> options.MaxBatchSize(100))
                 .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, 
                 LogLevel.Information)
+                .EnableSensitiveDataLogging();*/
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SamuraiAppData"
+                , options => options.MaxBatchSize(100))
+                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name ,
+                DbLoggerCategory.Database.Transaction.Name},LogLevel.Debug)
                 .EnableSensitiveDataLogging();
             //base.OnConfiguring(optionsBuilder);
 
@@ -26,10 +31,12 @@ namespace samuraiApp.Data
                 .HasMany(s => s.Battles)
                 .WithMany(b => b.Samurais)
                 .UsingEntity<BattleSamurai>
+                  //.UsingEntity<XYZBattleSamurai>
                   (bs => bs.HasOne<Battle>().WithMany(),
                    bs => bs.HasOne<Samurai>().WithMany())
                   .Property(bs => bs.DateJoined)
                   .HasDefaultValueSql("getdate()");
+           // modelBuilder.Entity<XYZBattleSamurai>().ToTable("BattleSamurai");
 
         }
 

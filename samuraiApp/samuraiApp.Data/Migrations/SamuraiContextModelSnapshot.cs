@@ -10,7 +10,7 @@ using samuraiApp.Data;
 
 namespace samuraiApp.Data.Migrations
 {
-    [DbContext(typeof(SamuraiContext))]
+    [DbContext(typeof(SamuraiContextNoTracking))]
     partial class SamuraiContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

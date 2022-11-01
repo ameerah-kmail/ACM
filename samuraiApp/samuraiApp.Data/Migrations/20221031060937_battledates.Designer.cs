@@ -11,7 +11,7 @@ using samuraiApp.Data;
 
 namespace samuraiApp.Data.Migrations
 {
-    [DbContext(typeof(SamuraiContext))]
+    [DbContext(typeof(SamuraiContextNoTracking))]
     [Migration("20221031060937_battledates")]
     partial class battledates
     {
